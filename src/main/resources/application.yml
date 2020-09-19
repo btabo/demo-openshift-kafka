@@ -3,7 +3,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: apache-kafka
+          brokers: apache-kafka.demo-openshift-dev.svc.cluster.local
           defaultBrokerPort: 9092
       bindings:
         greetings-in:
