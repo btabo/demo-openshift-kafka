@@ -3,7 +3,8 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: apache-kafka:9092
+          brokers: apache-kafka
+          defaultBrokerPort: 9092
       bindings:
         greetings-in:
           destination: greetings
