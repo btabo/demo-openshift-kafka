@@ -3,13 +3,21 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: apache-kafka.demo-openshift-dev.svc.cluster.local
+          brokers: demo-kafka-kafka-bootstrap.streaming.svc.cluster.local
           defaultBrokerPort: 9092
+          #brokers: 172.29.86.146
+          #defaultBrokerPort: 9094
+          configuration:
+            security.protocol: SSL
+#            ssl.keystore.location: /home/bta/.sdkman/candidates/java/8.0.272.hs-adpt/jre/lib/security/cacerts
+#            ssl.keystore.password: changeit
+#            ssl.truststore.location: /home/bta/.sdkman/candidates/java/8.0.272.hs-adpt/jre/lib/security/cacerts
+#            ssl.truststore.password: changeit
       bindings:
         greetings-in:
-          destination: greetings
+          destination: spring-boot
           contentType: application/json
         greetings-out:
-          destination: greetings
+          destination: spring-boot
           contentType: application/json
 #      default-binder: apache-kafkaversion

@@ -1,0 +1,1 @@
+oc new-build registry.access.redhat.com/ubi8/openjdk-11~https://github.com/btabo/demo-openshift-kafka.git --name=spring-boot
